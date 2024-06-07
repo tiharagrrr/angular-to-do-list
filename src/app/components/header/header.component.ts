@@ -10,4 +10,8 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class HeaderComponent {
   title: string = 'Tee\'s Task List';
+
+  toggleAddTask() {
+    console.log('toggle');
+  }
 }
