@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TASKS } from '../../mock-tasks';
+import { TaskService } from '../../services/task.service';
 import { Task } from '../../Task';
 import { NgFor } from '@angular/common';
 import { TaskItemComponent } from '../task-item/task-item.component';
@@ -12,5 +12,7 @@ import { TaskItemComponent } from '../task-item/task-item.component';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-  tasks: Task[] = TASKS;
+  tasks: Task[] = [];
+
+  constructor(private taskService: TaskService) { }
 }
